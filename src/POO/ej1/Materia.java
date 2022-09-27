@@ -1,8 +1,8 @@
 package POO.ej1;
 
 public class Materia {
-        private String nombre;
-        private int codigo;
+        private final String nombre;
+        private final int codigo;
         private final int creditos;
 
         public Materia(String nombre, int codigo, int creditos) {
@@ -13,6 +13,14 @@ public class Materia {
 
         public int getCreditos() {
                 return creditos;
+        }
+
+        public String getNombre() {
+                return nombre;
+        }
+
+        public int hashCode(){
+                return this.codigo;
         }
 
 }
