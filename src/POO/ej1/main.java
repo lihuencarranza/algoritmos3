@@ -11,9 +11,9 @@ public class Main {
                 Materia fisica2 = new Materia("Física II", 6203, 8);
                 Materia orga = new Materia("Organización del Computador", 9557, 8);
 
-                Carrera ing = new Carrera(0, new Materia[] {algo1, fisica1}, new Materia[] {}, 16);
-                Carrera lic = new Carrera(1, new Materia[] {algo1, fisica1, discreta, am2}, new Materia[] {algo2, algebra2, fisica2, orga}, 32);
-                
+                Set hash = new Hashtable<Integer, Materia>();
+
+
 
         }
 
