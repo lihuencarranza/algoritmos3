@@ -13,8 +13,8 @@ class Historial{
 }
 
 class Mensaje{
- -remitente: Usuario
- -destinatario: Usuario
+ -emisor: Usuario
+ -receptor: Usuario
  -texto: String
 }
 
