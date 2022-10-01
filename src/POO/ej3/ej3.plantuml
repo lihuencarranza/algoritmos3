@@ -1,0 +1,42 @@
+@startuml
+
+class Sistema{
+ -usuarios: Usuario[]
+
+ void registrarUsuario()
+ void validarUsuario()
+ 
+ 
+}
+
+class Historial{
+ -emisor: Usuario
+ -receptor: Usuario
+ -historial: Mensaje[]
+}
+
+class Mensaje{
+ -usuario1: Usuario
+ -usuario2: Usuario
+ -texto: String
+}
+
+class Usuario{
+ -nombre: String
+ -constraseña: String
+ -historiales: Historial[]
+} 
+
+class Personal extends Usuario{
+ -nombre: String
+ -constraseña: String
+ -historiales: Historial[]
+}
+
+Sistema "1" -o "*" Usuario
+
+Usuario "1" -o "*" Historial
+
+Historial "1" -o "*" Mensaje
+
+@enduml
