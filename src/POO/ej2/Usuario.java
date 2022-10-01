@@ -10,12 +10,11 @@ public class Usuario {
                 this.numero = numero;
                 this.nombre = nombre;
                 this.contactos = new Usuario[10];
-                this.historial = new Historial();
-                
         }
 
 
-        public void addContacto(Usuario contacto) {
+        public void addContacto(Usuario contacto, Historial historial) {
+                this.historial = historial;
                 for (int i = 0; i < contactos.length; i++) {
                         if (contactos[i] == null) {
                                 contactos[i] = contacto;
