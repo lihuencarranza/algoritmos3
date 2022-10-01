@@ -1,3 +1,5 @@
+### Ejercicio 1
+
 Diseñar e implementar un sistema que permita contabilizar las materias aprobadas de un plan de estudios de FIUBA.
 Cada materia de FIUBA tiene un código, un nombre y una cantidad de créditos, y puede ser obligatoria u optativa.
 Una carrera está compuesta por un listado de materias (que pueden ser obligatorias u optativas), y una cantidad mínima de créditos. Para terminar la carrera hay que aprobar todas las materias obligatorias y además cumplir la cantidad de créditos.
