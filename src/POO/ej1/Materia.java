@@ -19,8 +19,8 @@ public class Materia {
                 return nombre;
         }
 
-        public int hashCode(){
-                return this.codigo;
+        public int getCodigo() {
+                return codigo;
         }
 
 }
