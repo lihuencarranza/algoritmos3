@@ -4,23 +4,43 @@ class Usuario{
  -nombre: String
  -contactos: Usuario[]
  -historial: Historial[]
+
+ Usuario()
+ void addContacto()
+ void enviarMensaje()
+ void recibirMensaje()
+ void mostrarHistorial()
+ void mostrarContactos()
+ int getNumero()
+ String getNombre() 
 } 
 
 class Historial{
  historial: Mensaje[]
  usuario1: Usuario
  usuario2: Usuario
+
+ Historial()
+ void addMensaje()
+ void mostrar()
+ String getUsuario1()
+ String getUsuario2()
 }
 
 class Mensaje{
- -emisor: Usuario
- -receptor: Usuario
+ -remitente: Usuario
+ -destinatario: Usuario
  -texto: String
+
+ Mensaje()
+ Usuario getEmisor()
+ Usuario getReceptor()
+ String getTexto()
 }
 
-Usuario "2" o- "1" Historial
-
 Historial "1" o- "*" Mensaje
+
+Usuario "2" o- "1" Historial
 
 Usuario "1" o- "*" Mensaje
 
