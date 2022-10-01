@@ -11,6 +11,7 @@ public class Usuario {
                 this.nombre = nombre;
                 this.contactos = new Usuario[10];
                 this.historial = new Historial();
+                
         }
 
 
