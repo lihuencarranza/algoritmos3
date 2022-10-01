@@ -1,0 +1,27 @@
+@startuml
+class Usuario{
+ -numero: int
+ -nombre: String
+ -contactos: Usuario[]
+ -historial: Historial[]
+} 
+
+class Historial{
+ historial: Mensaje[]
+ usuario1: Usuario
+ usuario2: Usuario
+}
+
+class Mensaje{
+ -remitente: Usuario
+ -destinatario: Usuario
+ -texto: String
+}
+
+Historial "1" o- "*" Mensaje
+
+Usuario "1" o- "*" Historial
+
+Usuario "1" o- "*" Mensaje
+
+@enduml
