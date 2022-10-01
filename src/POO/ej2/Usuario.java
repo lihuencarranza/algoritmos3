@@ -13,6 +13,7 @@ public class Usuario {
                 this.historial = new Historial();
         }
 
+
         public void addContacto(Usuario contacto) {
                 for (int i = 0; i < contactos.length; i++) {
                         if (contactos[i] == null) {
@@ -47,5 +48,9 @@ public class Usuario {
                 return numero;
         }
 
-        
+        public String getNombre() {
+                return nombre;
+        }
+
+
 }

@@ -18,9 +18,9 @@ class Mensaje{
  -texto: String
 }
 
-Historial "1" o- "*" Mensaje
+Usuario "2" o- "1" Historial
 
-Usuario "1" o- "*" Historial
+Historial "1" o- "*" Mensaje
 
 Usuario "1" o- "*" Mensaje
 
