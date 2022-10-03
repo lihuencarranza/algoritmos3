@@ -54,20 +54,48 @@ public class Main {
                                         System.out.println("Ingrese |1| para registrarse o |2| para ingresar");
                                         opcion = sc.nextInt();
 
-                                }
-                               
+                                }        
                         } else {
                                 System.out.println("Opcion incorrecta");
                         }
                 }
 
+                
+
+                System.out.println("Ingrese |1| para enviar un mensaje, |2| para ver su historial o |3| para salir");
+                opcion = sc.nextInt();
+                while (opcion != 3) {
+                        if (opcion == 1) {
+                                sistema.mostrarUsuarios();
+                                System.out.println("Ingrese el nombre del destinatario");
+                                String nombre = sc.next();
+                                if (sistema.existeUsuario(nombre)) {
+                                        if (nombre.equals("Juan")) {
+                                                System.out.println("No puede enviar mensajes a si mismo");
+                                        } else {
+                                                System.out.println("Ingrese el mensaje");
+                                                String mensaje = sc.next();
+                                                sistema.enviarMensaje(nombre, mensaje);
+                                                System.out.println("Mensaje enviado con exito");
+                                        }
+                                        
+                                } else {
+                                        System.out.println("El usuario no existe");
+                                }
+                        } else if (opcion == 2) {
+                                if (!sistema.historialVacio()) {
+                                        sistema.mostrarHistorial();
+                                } else {
+                                        System.out.println("No tiene mensajes");
+                                }
+                        } else {
+                                System.out.println("Opcion incorrecta");
+                        }
+                        System.out.println("Ingrese |1| para enviar un mensaje, |2| para ver su historial o |3| para salir");
+                        opcion = sc.nextInt();
+                }
 
 
-                
-                
-               
-                
-                
         }
                 
 }

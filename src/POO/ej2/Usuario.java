@@ -12,7 +12,6 @@ public class Usuario {
                 this.contactos = new Usuario[10];
         }
 
-
         public void addContacto(Usuario contacto, Historial historial) {
                 this.historial = historial;
                 for (int i = 0; i < contactos.length; i++) {

@@ -24,6 +24,40 @@ public class Sistema {
                 return usuario.getPassword().equals(password);
         }
 
+        public void mostrarUsuarios() {
+                for (String nombre : usuarios.keySet()) {
+                        System.out.println(nombre);
+                }
+        }
+
+        public void enviarMensaje(String nombre, String mensaje) {
+                Usuario usuario = usuarios.get(nombre);
+                if (!usuarios.containsKey(nombre)) {
+                        System.out.println("El usuario no existe");
+                } else {
+                        usuario.enviarMensaje(usuario, mensaje);
+
+                }
+        }
+
+        public void mostrarHistorial() {
+                for (String nombre : usuarios.keySet()) {
+                        Usuario usuario = usuarios.get(nombre);
+                        usuario.mostrarHistorial();
+                }
+        }
+
+        public boolean historialVacio() {
+                for (String nombre : usuarios.keySet()) {
+                        Usuario usuario = usuarios.get(nombre);
+                        if (!usuario.historialVacio()) {
+                                return false;
+                        }
+                }
+                return true;
+        }
+        
+
 
         
 }
